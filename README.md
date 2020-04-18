@@ -1,5 +1,3 @@
-litepresence2020 presents:
-
 BitShares "Shorting Attack" Avenger ^TM
 
 pre-alpha
