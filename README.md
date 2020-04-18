@@ -4,6 +4,10 @@ BitShares "Shorting Attack" Avenger ^TM
 
 pre-alpha
 
+To Run
+=======================================
+    python3 Avenger.py
+
 User Enters
 =======================================
     Account Name and Wif
