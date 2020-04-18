@@ -46,7 +46,7 @@ Features Complete:
 
 **1) GET OPEN CALL ORDERS**
 
-an initial public api rpc for margin positions returns a list of dicts
+An initial public api rpc for margin positions returns a list of dicts
 you are given asset_id's of the collateral and debt
 and the graphene amount of each that you hold
 but no actual price data
@@ -67,7 +67,7 @@ in human terms the response is murky, but this is a full accounting of our debts
 
 **2) GET MORE INFO ON ALL ORDERS**
 
-the script makes this information more useful by making some additional calls
+The script makes this information more useful by making some additional calls:
 
     get_ticker()                   # last, ask, bid
     get_objects(asset_id)          # asset_name, precision, bitasset_data_id
@@ -75,35 +75,35 @@ the script makes this information more useful by making some additional calls
 
 **3) USER INPUT TO BOT**
 
-and considers user input upper and lower bound percent buffer above the MCR
+It then considers user input upper and lower bound percent buffer above the MCR:
 
 
     buffer_max  # maximum collateral held above mcr in percent terms
     buffer_min  # minimum likewise
 
-such that:  
+Such that:  
 
     (1 < buffer_min < buffer_max < 10)
 
 **4) STATE MACHINE**
 
-if the price gets out of bounds collateral is brought back to
+If the price gets out of bounds collateral is brought back to:
 
     buffer_mid  # halfway between user defined buffer_max and buffer_min coeffs of MCR
 
 **5) NORMALIZING**
 
-all amounts are converted from graphene to human readable and rounded to 6 sig figures
+All amounts are converted from graphene to human readable and rounded to 6 sig figures
 
 **6) API**
 
-the result is stored as a easy to navigate list of positions
+The result is stored as a easy to navigate list of positions
 each position dictionary contains an "id" and 3 sub dicts:
 
     [collateral, debt, price]
 
-this is the hocus pocus which makes automated dex collateral management possible
-by exposing a human compatible api to the borrower:
+This is the hocus pocus which makes automated dex collateral management possible
+by exposing a human compatible list of dictionaries, of pertinent loan data, to the borrower:
 
 ```
     [                               # list of nested position dictionaries
