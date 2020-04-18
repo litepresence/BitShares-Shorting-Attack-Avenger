@@ -46,7 +46,7 @@ you are given asset_id's of the collateral and debt
 and the graphene amount of each that you hold
 but no actual price data
 in human terms the response is murky, but this is a full accounting of our debts
-
+```
     [
     {'id',
     'borrower',
@@ -57,7 +57,7 @@ in human terms the response is murky, but this is a full accounting of our debts
         'quote': {'asset_id'}}}  # quote debt asset i_d
     , ...
     ]
-
+```
 2) GET MORE INFO ON ALL ORDERS
 the script makes this information more useful by making some additional calls
 
@@ -91,7 +91,7 @@ each position dictionary contains an "id" and 3 sub dicts:
 
 this is the hocus pocus which makes dex collateral management possible
 by exposing a human compatible api:
-
+```
     [                               # list of nested position dictionaries
     {
         'id':                       # 1.8.x debt identifier
@@ -126,7 +126,7 @@ by exposing a human compatible api:
         },
     }
     ...]
-
+```
 Execute:
 =======================================
 for each margin_position in my open call positions list:
