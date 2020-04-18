@@ -102,7 +102,7 @@ each position dictionary contains an "id" and 3 sub dicts:
 
     [collateral, debt, price]
 
-this is the hocus pocus which makes dex collateral management possible
+this is the hocus pocus which makes automated dex collateral management possible
 by exposing a human compatible api to the borrower:
 
 ```
