@@ -63,25 +63,27 @@ in human terms the response is murky, but this is a full accounting of our debts
 
 the script makes this information more useful by making some additional calls
 
-get_ticker()  # last, ask, bid
-get_objects(asset_id)  # asset_name, precision, bitasset_data_id
-get_objects(bitasset_data_id)  # settlement conditions
+    get_ticker()                   # last, ask, bid
+    get_objects(asset_id)          # asset_name, precision, bitasset_data_id
+    get_objects(bitasset_data_id)  # settlement conditions
 
 **3) USER INPUT TO BOT**
 
 and considers user input upper and lower bound percent buffer above the MCR
 
 
-buffer_max  # maximum collateral held above mcr in percent terms
-buffer_min  # minimum likewise
+    buffer_max  # maximum collateral held above mcr in percent terms
+    buffer_min  # minimum likewise
 
-such that:  ```(1 < buffer_min < buffer_max < 10)```
+such that:  
+
+    (1 < buffer_min < buffer_max < 10)
 
 **4) STATE MACHINE**
 
 if the price gets out of bounds collateral is brought back to
 
-buffer_mid  # halfway between user defined buffer_max and buffer_min coeffs of MCR
+    buffer_mid  # halfway between user defined buffer_max and buffer_min coeffs of MCR
 
 **5) NORMALIZING**
 
@@ -136,10 +138,9 @@ by exposing a human compatible api:
 Execute:
 =======================================
 
-for each margin_position in my open call positions list:
+    for each margin_position in my open call positions list:
 
-    # if I have too much or too little buffer over the MCR
+        # if I have too much or too little buffer over the MCR
+        if min_buffer > collateral > max_buffer:
 
-    if min_buffer > collateral > max_buffer:
-
-        update_call(position["collateral"]["delta"])
+            update_call(position["collateral"]["delta"])
