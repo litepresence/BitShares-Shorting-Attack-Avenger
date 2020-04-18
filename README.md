@@ -40,12 +40,14 @@ Features Todo:
 Features Complete:
 =======================================
 
-1) GET OPEN CALL ORDERS
+**1) GET OPEN CALL ORDERS**
+
 an initial public api rpc for margin positions returns a list of dicts
 you are given asset_id's of the collateral and debt
 and the graphene amount of each that you hold
 but no actual price data
 in human terms the response is murky, but this is a full accounting of our debts
+
 ```
     [
     {'id',
@@ -58,32 +60,37 @@ in human terms the response is murky, but this is a full accounting of our debts
     , ...
     ]
 ```
-2) GET MORE INFO ON ALL ORDERS
+
+**2) GET MORE INFO ON ALL ORDERS**
+
 the script makes this information more useful by making some additional calls
 
 get_ticker()  # last, ask, bid
 get_objects(asset_id)  # asset_name, precision, bitasset_data_id
 get_objects(bitasset_data_id)  # settlement conditions
 
-3) USER INPUT TO BOT
+**3) USER INPUT TO BOT**
+
 and considers user input upper and lower bound percent buffer above the MCR
 
 
 buffer_max  # maximum collateral held above mcr in percent terms
 buffer_min  # minimum likewise
 
-such that:  (1 < buffer_min < buffer_max < 10)
+such that:  ```(1 < buffer_min < buffer_max < 10)```
 
+**4) STATE MACHINE**
 
-4) STATE MACHINE
 if the price gets out of bounds collateral is brought back to
 
 buffer_mid  # halfway between user defined buffer_max and buffer_min coeffs of MCR
 
-5) NORMALIZING
+**5) NORMALIZING**
+
 all amounts are converted from graphene to human readable and rounded to 6 sig figures
 
-6) API
+**6) API**
+
 the result is stored as a easy to navigate list of positions
 each position dictionary contains an "id" and 3 sub dicts:
 
@@ -91,6 +98,7 @@ each position dictionary contains an "id" and 3 sub dicts:
 
 this is the hocus pocus which makes dex collateral management possible
 by exposing a human compatible api:
+
 ```
     [                               # list of nested position dictionaries
     {
@@ -129,6 +137,7 @@ by exposing a human compatible api:
 ```
 Execute:
 =======================================
+
 for each margin_position in my open call positions list:
 
     # if I have too much or too little buffer over the MCR
