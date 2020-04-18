@@ -135,6 +135,8 @@ by exposing a human compatible api:
     }
     ...]
 ```
+The last item to be added to the dictionary is the `position["collateral"]["delta"]`, which is a culmination of all the other data in the dictionary.  `collateral_delta` will be required in the final `Call_order_update` operation, which we are ultimately preparing, to maintain collateral for each margin position.
+
 Execute:
 =======================================
 
