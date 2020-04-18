@@ -1,5 +1,10 @@
 """
+BitShares Shorting Attacks Avenger
 
+ensures you always have adequate collateral backing each debt
+it also ensures you do not have too much collateral backing your debt
+in either case, when out of bounds
+it returns your collateral to the middle of the band specified
 
 """
 
