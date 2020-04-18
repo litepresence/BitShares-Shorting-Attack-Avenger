@@ -1,3 +1,9 @@
+<p align="center"> 
+<img src="https://imgur.com/4hSbRja.jpg">	
+<img src="https://imgur.com/ygdhTpw.jpg">
+</p>
+
+
 BitShares "Shorting Attack" Avenger ^TM
 
 pre-alpha
