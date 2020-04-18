@@ -1745,12 +1745,12 @@ def serialize_transaction(tx):
             "operations":
                 [[3,{
                 "fee":{"amount":"48260","asset_id":"1.3.0"},
-                "funding_account":"1.2.581357",
+                "funding_account":"1.2.111111",
                 "delta_collateral":{"amount":"1","asset_id":"1.3.5650"},
                 "delta_debt":{"amount":"0","asset_id":"1.3.5662"},
                 "extensions":{"target_collateral_ratio":2000}}]],
                 "extensions":[],"signatures":[]},
-                ["BTS6upQe7xWa15Rj757Szygi8memj1PCGXugyC17WWZuKxkSJ1iW2"]]],
+                ["BTS6upQe7upQe7upQe7upQe7upQe7upQe7upQe7upQe7upQe7upQe7"]]],
             "id":371}
     """
 
