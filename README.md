@@ -151,4 +151,4 @@ Execute:
         # if I have too much or too little buffer over the MCR
         if min_buffer > collateral > max_buffer:
 
-            update_call(position["collateral"]["delta"])
+            Call_order_update(collateral_delta)
