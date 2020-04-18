@@ -6,32 +6,32 @@ pre-alpha
 
 User Enters
 =======================================
-Account Name and Wif
-Minimum and Maximum Buffer over MCR; eg. 20% to 30% over MCR
-Update Frequency; eg. every 10 minutes
+    Account Name and Wif
+    Minimum and Maximum Buffer over MCR; eg. 20% to 30% over MCR
+    Update Frequency; eg. every 10 minutes
 
 Script Maintains Collateral
 =======================================
-Shorting Attacks Avenger ensures you always have adequate collateral backing each debt
-it also ensures you do not have too much collateral backing your debt
-in either case, when out of bounds
-it returns your collateral to the middle of the band specified
+    Shorting Attacks Avenger ensures you always have adequate collateral backing each debt
+    it also ensures you do not have too much collateral backing your debt
+    in either case, when out of bounds
+    it returns your collateral to the middle of the band specified
 
 Dependencies:
 =======================================
-Collateral control leverages dex_manual_signing to perform ecdsa, it can be run in an
-extinction-event environment.  Else you will need minimum of
+    Collateral control leverages dex_manual_signing to perform ecdsa, it can be run in an
+    extinction-event environment.  Else you will need minimum of
 
-python3.7+ and pip3 modules: ecdsa, secp256k1, websocket-client
+    python3.7+ and pip3 modules: ecdsa, secp256k1, websocket-client
 
-built and tested on linux mint 19
+    built and tested on linux mint 19
 
 Features Todo:
 =======================================
-30+ Day app runtime durability
-edit naming conventions, pylint, pep8
-handle bad user inputs
-improve cli ux with pandas like table view and color terminal
+    30+ Day app runtime durability
+    edit naming conventions, pylint, pep8
+    handle bad user inputs
+    improve cli ux with pandas like table view and color terminal
 
 Features Complete:
 =======================================
